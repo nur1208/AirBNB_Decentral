@@ -1,1 +1,3 @@
 - {DONE} setting up react and truffle
+- {DONE} creating Airbnb smart contract
+- {DONE} writing test units for addRentals function in Airbnb smart contract
