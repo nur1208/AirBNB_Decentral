@@ -6,6 +6,8 @@ const Airbnb = artifacts.require("Airbnb");
 
 contract("Airbnb", ([owner, user, user2]) => {
   let airbnb;
+  console.log({ owner, user, user2 });
+
   const data = [
     {
       name: "Apartment In China Town",

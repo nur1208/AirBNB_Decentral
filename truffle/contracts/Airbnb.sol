@@ -4,7 +4,7 @@ pragma solidity 0.8.0;
 
 contract Airbnb {
     address public owner;
-    uint256 private counter;
+    uint256 public counter;
 
     constructor() {
         counter = 0;
