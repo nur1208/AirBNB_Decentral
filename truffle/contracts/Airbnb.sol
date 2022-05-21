@@ -50,7 +50,7 @@ contract Airbnb {
         string imgUrl 
     );
 
-    mapping(uint256 => rentalInfo) rentals;
+    mapping(uint256 => rentalInfo) public rentals;
     uint256[] public rentalIds;
 
      function addRentals(
@@ -111,7 +111,7 @@ contract Airbnb {
 
 
      function addDatesBooked(uint256 id, string[] memory newBookings) public payable {
-        
+         
         require(id < counter, "No such Rental");
         require(checkBookings(id, newBookings), "Already Booked For Requested Date");
         require(msg.value == (rentals[id].pricePerDay * 1 ether * newBookings.length) , "Please submit the asking price in order to complete the purchase");
