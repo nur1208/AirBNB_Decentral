@@ -5,11 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
+import { NotificationProvider } from "web3uikit";
+
 ReactDOM.render(
   <React.StrictMode>
+    {/* <NotificationProvider> */}
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    {/* </NotificationProvider> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
