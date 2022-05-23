@@ -1,6 +1,7 @@
 import Web3 from "web3";
 // import NFTBuildContract from "./build/contracts/NFT.json";
 import NFTBuildContract from "./abis/NFT.json";
+import Airbnb from "./abis/Airbnb.json";
 
 let selectedAccount;
 let nftContract;
@@ -34,13 +35,18 @@ export const init = async () => {
   }
   const web3 = new Web3(provider);
   const networkId = await web3.eth.net.getId();
-
   const address = NFTBuildContract.networks[networkId].address;
-
+  const airbnbAddress = Airbnb.networks[networkId].address;
+  const airbnb = new web3.eth.Contract(
+    Airbnb.abi,
+    airbnbAddress
+  );
   nftContract = new web3.eth.Contract(
     NFTBuildContract.abi,
     address
   );
+
+  return { airbnb, selectedAccount };
 };
 
 export const mintToken = () => {

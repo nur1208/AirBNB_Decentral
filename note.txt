@@ -2,3 +2,4 @@
 - {DONE} creating Airbnb smart contract
 - {DONE} writing test units for addRentals function in Airbnb smart contract
 - {DONE} writing test units for addDatesBooked function in Airbnb smart contract
+- {DONE} initializing Airbnb smart contract in the frontend 

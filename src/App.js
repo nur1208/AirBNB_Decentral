@@ -1,20 +1,15 @@
-import { useEffect, useState } from "react";
-import { init, mintToken } from "./Web3Client";
-
+import { useWeb3Client } from "./useWeb3Client";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import { Home } from "./pagas/Home/Home";
 function App() {
-  useEffect(() => {
-    (async () => {
-      await init();
-      const tx = await mintToken();
-      console.log("working!!!");
+  useWeb3Client();
 
-      console.log({ tx });
-    })();
-  }, []);
-  // const [balance, setBalance] = useState(0);
-
-  // const mint = () => {};
-  return <div className="App">app</div>;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
 }
 
 export default App;
