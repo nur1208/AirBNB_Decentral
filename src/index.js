@@ -4,16 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-
-import { NotificationProvider } from "web3uikit";
+import { NotificationProvider } from "./components/Notification";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <NotificationProvider> */}
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-    {/* </NotificationProvider> */}
+    <NotificationProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </NotificationProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

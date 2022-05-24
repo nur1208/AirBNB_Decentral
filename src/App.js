@@ -4,6 +4,7 @@ import "./App.css";
 import { Home } from "./pagas/Home/Home";
 import { Icon, iconTypes } from "./components/Icon";
 import { NotificationProvider } from "./components/Notification";
+import { Illustration } from "./components/Illustrations";
 
 function App() {
   useWeb3Client();
@@ -13,11 +14,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route
         path="/test"
-        element={
-          <NotificationProvider>
-            <Home />
-          </NotificationProvider>
-        }
+        element={<Illustration logo="ethereum" />}
       />
     </Routes>
   );
