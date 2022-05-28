@@ -4,3 +4,5 @@
 - {DONE} writing test units for addDatesBooked function in Airbnb smart contract
 - {DONE} initializing Airbnb smart contract in the frontend 
 - {DONE} creating Notification component
+- {DONE} creating Illustration component
+- {DONE} creating Select component
